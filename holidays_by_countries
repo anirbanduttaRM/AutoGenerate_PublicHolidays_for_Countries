@@ -1,0 +1,8 @@
+all_holidays = []
+country_list = ['Belgium', 'France', 'Germany' ,'Italy' ,'Poland', 'Spain']
+
+for country in country_list:
+    for holiday in holidays.CountryHoliday(country, years = np.arange(2017,2021,1)).items():
+        all_holidays.append({'date' : holiday[0], 'holiday' : holiday[1], 'country': country})
+all_holidays = pd.DataFrame(all_holidays)
+all_holidays
